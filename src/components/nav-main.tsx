@@ -4,6 +4,7 @@ import * as React from 'react'
 import Link from 'next/link'
 import { Button } from './ui/button'
 import { cn } from '@/lib/utils'
+import content from '@/lib/content.json'
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -69,7 +70,7 @@ export function NavMain() {
                   <li className="row-span-3">
                     <NavigationMenuLink asChild>
                       <a
-                        className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
+                        className="text-xl flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
                         href="/"
                       >
                         {/* <Icons.logo className="h-6 w-6" /> */}
@@ -83,7 +84,7 @@ export function NavMain() {
                       </a>
                     </NavigationMenuLink>
                   </li>
-                  <ListItem href="/docs" title="Introduction">
+                  <ListItem href="/docs" title="Introduction" className="">
                     Re-usable components built using Radix UI and Tailwind CSS.
                   </ListItem>
                   <ListItem href="/docs/installation" title="Installation">
@@ -99,9 +100,11 @@ export function NavMain() {
               </NavigationMenuContent>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <NavigationMenuTrigger>Components</NavigationMenuTrigger>
+              <NavigationMenuTrigger className="text-xl">
+                SERVICES
+              </NavigationMenuTrigger>
               <NavigationMenuContent>
-                <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+                <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] z-50">
                   {components.map(component => (
                     <ListItem
                       key={component.title}
@@ -126,7 +129,7 @@ export function NavMain() {
       </div>
       <div className="flex gap-8">
         <ModeToggle />
-        <Button>Call us</Button>
+        <Button>{content.nav.ctatext}</Button>
       </div>
     </div>
   )

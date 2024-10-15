@@ -61,6 +61,9 @@ const config: Config = {
         md: 'calc(var(--radius) - 2px)',
         sm: 'calc(var(--radius) - 4px)',
       },
+      backgroundImage: {
+        'hero-image': "url('/public/hero.jpeg')",
+      },
     },
   },
   plugins: [require('tailwindcss-animate')],
