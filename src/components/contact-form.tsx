@@ -21,6 +21,7 @@ import { Input } from '@/components/ui/input'
 const formSchema = z.object({
   name: z.string().min(1).max(50),
   email: z.string().email(),
+  phone: z.string().max(11),
   message: z.string().max(2500),
 })
 
@@ -31,6 +32,7 @@ export function ContactForm() {
     defaultValues: {
       name: '',
       email: '',
+      phone: '',
       message: '',
     },
   })
@@ -68,6 +70,20 @@ export function ContactForm() {
               <FormLabel>Email</FormLabel>
               <FormControl>
                 <Input type="email" placeholder="Your email here" {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="phone"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Phone</FormLabel>
+              <FormControl>
+                <Input placeholder="Phone" {...field} />
+                {/* <Input type="email" placeholder="Your email here" {...field} /> */}
               </FormControl>
               <FormMessage />
             </FormItem>

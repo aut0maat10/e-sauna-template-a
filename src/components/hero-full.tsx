@@ -1,13 +1,15 @@
 import Image from 'next/image'
-import { ContactForm } from './contact-form'
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from '@/components/ui/card'
+import { Button } from './ui/button'
+import { EnvelopeOpenIcon, MobileIcon } from '@radix-ui/react-icons'
+// import { ContactForm } from './contact-form'
+// import {
+//   Card,
+//   CardContent,
+//   CardDescription,
+//   CardFooter,
+//   CardHeader,
+//   CardTitle,
+// } from '@/components/ui/card'
 export function HeroFull() {
   return (
     <div className="h-[70vh] w-full relative">
@@ -27,6 +29,16 @@ export function HeroFull() {
           {/* <p className="self-start text-5xl font-bold text-secondary">
             Since 1998
           </p> */}
+          <div className="flex gap-4 p-8 z-50">
+            <Button variant={'destructive'}>
+              <MobileIcon className="mr-2 h-4 w-4" />
+              Call Us Now
+            </Button>
+            <Button variant={'outline'}>
+              <EnvelopeOpenIcon className="mr-2 h-4 w-4" />
+              Get a Free Quote
+            </Button>
+          </div>
         </div>
       </div>
     </div>
