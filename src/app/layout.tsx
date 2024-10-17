@@ -1,6 +1,8 @@
 import { ThemeProvider } from '@/components/theme-provider'
 import { Oswald, Noto_Serif } from 'next/font/google'
 import './globals.css'
+import { NavMain } from '@/components/nav-main'
+import { Footer } from '@/components/footer'
 
 const oswald = Oswald({
   subsets: ['latin'],
@@ -30,7 +32,9 @@ export default function RootLayout({ children }: RootLayoutProps) {
             enableSystem
             disableTransitionOnChange
           >
+            <NavMain />
             {children}
+            <Footer />
           </ThemeProvider>
         </body>
       </html>

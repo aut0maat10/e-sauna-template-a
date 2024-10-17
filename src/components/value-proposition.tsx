@@ -10,7 +10,7 @@ import {
 
 export function ValueProposition() {
   return (
-    <div className="container flex p-12">
+    <div className="container flex p-12 mt-8">
       <div className="flex flex-col w-2/3 px-12">
         <div>
           <h2 className="text-5xl my-4 text-yellow-400">
@@ -34,6 +34,10 @@ export function ValueProposition() {
           offering honest advice, transparent pricing, and a commitment to
           quality that has made us a trusted name in the community.
         </p>
+        <div className="flex flex-col items-center w-full mt-8 gap-4">
+          <h3 className="text-3xl font-bold animate-pulse">Call us now!</h3>
+          <h3 className="text-3xl font-bold text-red-500">(718) 123-4567</h3>
+        </div>
       </div>
       <div className="flex flex-col justify-center items-end w-1/3 h-full z-50">
         <Card className="w-full">
