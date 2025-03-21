@@ -71,7 +71,7 @@ export function ServicesSection({ className, ...props }: CardProps) {
               {...props}
             >
               <CardHeader>
-                <CardTitle className="text-xl text-red-500">
+                <CardTitle className="text-xl text-highlight-secondary">
                   <span className="mr-2">{service.icon}</span>
                   <br />
                   {service.title}
