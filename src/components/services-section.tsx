@@ -7,6 +7,7 @@ import {
   CardTitle,
 } from '@/components/ui/card'
 import { Button } from './ui/button'
+import Link from 'next/link'
 import { cn } from '@/lib/utils'
 
 type CardProps = React.ComponentProps<typeof Card>
@@ -18,6 +19,7 @@ const servicesCards = [
     description:
       'From faulty wiring to circuit breaker issues, our experienced electricians can handle any electrical repair, ensuring your peace of mind.',
     cta: 'Learn More',
+    link: '/services/electrical-repairs',
   },
   {
     title: 'Installations & Upgrades',
@@ -25,6 +27,7 @@ const servicesCards = [
     description:
       'Need new lighting, ceiling fans, or electrical panel upgrades? We provide seamless installations for homes and businesses of all sizes.',
     cta: 'Learn More',
+    link: '/services/installations-and-upgrades',
   },
   {
     title: 'Emergency Services',
@@ -32,6 +35,15 @@ const servicesCards = [
     description:
       'Experiencing an electrical emergency? Our team is available 24/7 to handle urgent issues and get you back up and running quickly.',
     cta: 'Get Help Now',
+    link: '/services/emergency-services',
+  },
+  {
+    title: 'Residential Services',
+    icon: '🏠',
+    description:
+      'We offer comprehensive electrical solutions for your home, including wiring, lighting, and energy-efficient upgrades tailored to your needs.',
+    cta: 'Learn More',
+    link: '/services/residential-services',
   },
   {
     title: 'Commercial Services',
@@ -39,6 +51,7 @@ const servicesCards = [
     description:
       'We provide tailored electrical solutions for businesses, including office wiring, lighting design, and energy-efficient upgrades.',
     cta: 'Learn More',
+    link: '/services/commercial-services',
   },
   {
     title: 'Inspections & Maintenance',
@@ -46,6 +59,7 @@ const servicesCards = [
     description:
       'Ensure your electrical systems are up to code with our thorough inspection and maintenance services to prevent issues before they start.',
     cta: 'Schedule an Inspection',
+    link: '/services/inspections-and-maintenance',
   },
 ]
 
@@ -82,7 +96,9 @@ export function ServicesSection({ className, ...props }: CardProps) {
                 <p>{service.description}</p>
               </CardContent>
               <CardFooter>
-                <Button>{service.cta}</Button>
+                <Button asChild>
+                  <Link href={service.link}>{service.cta}</Link>
+                </Button>
               </CardFooter>
             </Card>
           ))}

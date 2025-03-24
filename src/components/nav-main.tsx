@@ -18,39 +18,40 @@ import { ModeToggle } from './mode-toggle'
 
 const components: { title: string; href: string; description: string }[] = [
   {
-    title: 'Alert Dialog',
-    href: '/docs/primitives/alert-dialog',
+    title: 'Electrical Repairs',
+    href: '/services/electrical-repairs',
     description:
-      'A modal dialog that interrupts the user with important content and expects a response.',
+      'From faulty wiring to circuit breaker issues, our experienced electricians can handle any electrical repair, ensuring your peace of mind.',
   },
   {
-    title: 'Hover Card',
-    href: '/docs/primitives/hover-card',
+    title: 'Installations',
+    href: '/services/installations',
     description:
-      'For sighted users to preview content available behind a link.',
+      'Need new lighting, ceiling fans, or electrical panel upgrades? We provide seamless installations for homes and businesses of all sizes.',
   },
   {
-    title: 'Progress',
-    href: '/docs/primitives/progress',
+    title: 'Emergency Services',
+    href: '/services/emergency-services',
     description:
-      'Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.',
+      'Experiencing an electrical emergency? Our team is available 24/7 to handle urgent issues and get you back up and running quickly.',
   },
   {
-    title: 'Scroll-area',
-    href: '/docs/primitives/scroll-area',
-    description: 'Visually or semantically separates content.',
+    title: 'Commercial Services',
+    href: '/services/commercial-services',
+    description:
+      'We provide tailored electrical solutions for businesses, including office wiring, lighting design, and energy-efficient upgrades.',
   },
   {
-    title: 'Tabs',
-    href: '/docs/primitives/tabs',
+    title: 'Residential Services',
+    href: '/services/residential-services',
     description:
-      'A set of layered sections of content—known as tab panels—that are displayed one at a time.',
+      'We offer comprehensive electrical services for homes, including wiring, lighting installations, and energy-efficient solutions to enhance your living space.',
   },
   {
-    title: 'Tooltip',
-    href: '/docs/primitives/tooltip',
+    title: 'Inspections and Maintenance',
+    href: '/services/inspections-and-maintenance',
     description:
-      'A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.',
+      'Ensure your electrical systems are up to code with our thorough inspection and maintenance services to prevent issues before they start.',
   },
 ]
 

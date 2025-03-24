@@ -20,7 +20,7 @@ import testimonials from '@/lib/testimonials'
 export default function ReviewCarousel() {
   const [rating, setRating] = useState(5)
   return (
-    <div className="flex items-center p-28 gap-4">
+    <div className="flex items-center p-28 gap-4 w-full container">
       <div className="mr-12">
         <h3 className="text-5xl text-yellow-500">
           What our customers
@@ -34,29 +34,26 @@ export default function ReviewCarousel() {
             align: 'start',
             loop: true,
           }}
-          className="w-full max-w-xl"
+          className="w-full max-w-5xl"
         >
-          <CarouselContent>
+          <CarouselContent className="flex">
             {testimonials.map((testimonial, index) => (
-              <CarouselItem key={index} className="md:basis-2/3">
-                <div className="p-1">
-                  <Card>
-                    <CardHeader>
-                      <CardTitle>
-                        <div>
-                          <RatingReview rating={rating} setRating={setRating} />
-                        </div>
-                      </CardTitle>
-                      {/* <CardDescription>Card Description</CardDescription> */}
-                    </CardHeader>
-                    <CardContent>
-                      <p>{testimonial.feedback}</p>
-                    </CardContent>
-                    <CardFooter>
-                      <p>- {testimonial.customer}</p>
-                    </CardFooter>
-                  </Card>
-                </div>
+              <CarouselItem key={index} className="md:basis-1/3 flex">
+                <Card className="flex flex-col h-full">
+                  <CardHeader>
+                    <CardTitle>
+                      <div>
+                        <RatingReview rating={rating} setRating={setRating} />
+                      </div>
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent className="flex-grow">
+                    <p>{testimonial.feedback}</p>
+                  </CardContent>
+                  <CardFooter>
+                    <p>- {testimonial.customer}</p>
+                  </CardFooter>
+                </Card>
               </CarouselItem>
             ))}
           </CarouselContent>
