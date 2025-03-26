@@ -25,6 +25,10 @@ export default function RootLayout({ children }: RootLayoutProps) {
         className={`${oswald.variable} ${noto_serif.variable}`}
       >
         <head />
+        <meta
+          name="format-detection"
+          content="telephone=no, date=no, email=no, address=no"
+        />
         <body>
           <ThemeProvider
             attribute="class"

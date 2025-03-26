@@ -30,7 +30,10 @@ export function Footer() {
         </div>
       </div>
       <div className="flex justify-center py-8 bg-secondary">
-        <p>2024 Magnolia Electrical</p>
+        <p>
+          <span className="px-1">&#169;</span>
+          2025 Magnolia Electrical
+        </p>
       </div>
     </>
   )

@@ -9,6 +9,7 @@ import {
 import { Button } from './ui/button'
 import Link from 'next/link'
 import { cn } from '@/lib/utils'
+import Image from 'next/image'
 
 type CardProps = React.ComponentProps<typeof Card>
 
@@ -66,15 +67,29 @@ const servicesCards = [
 export function ServicesSection({ className, ...props }: CardProps) {
   return (
     <div className="container flex flex-col items-center">
-      <div className="flex flex-col items-center max-w-6xl p-8">
-        <h2 className="text-5xl my-8 text-yellow-400">
-          Our Electrical Services
-        </h2>
-        <h3 className="text-3xl text-center">
-          Whether you need a quick fix or a full electrical upgrade, we have you
-          covered. Explore our core services and see how we can help power your
-          home or&nbsp;business.
-        </h3>
+      <div className="flex flex-col lg:flex-row items-start max-w-6xl p-8">
+        <div className="lg:w-1/2 lg:pr-8">
+          <h2 className="text-5xl my-8 text-yellow-400">
+            Our Electrical Services
+          </h2>
+          <h3 className="text-3xl text-center lg:text-left">
+            Whether you need a quick fix or a full electrical upgrade, we have
+            you covered.
+            <br />
+            <br />
+            Explore our core services and see how we can help power your home
+            or&nbsp;business.
+          </h3>
+        </div>
+        <div className="lg:w-1/2 flex justify-center">
+          <Image
+            src="/electrician-happy.jpeg"
+            alt="Happy electrician at work"
+            width={800}
+            height={400}
+            className="my-8 rounded-lg shadow-lg"
+          />
+        </div>
       </div>
       <div className="flex flex-col justify-center">
         <div className="container flex flex-wrap gap-8 h-full mx-12 px-12 items-center">
