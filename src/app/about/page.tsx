@@ -24,7 +24,7 @@ export default function About() {
         />
       </div>
       <div className="max-w-4xl text-center">
-        <h2 className="text-2xl font-semibold text-highlight-secondary mb-4">
+        <h2 className="text-3xl font-semibold text-highlight-secondary mb-4">
           Why Choose Us?
         </h2>
         <p className="text-lg mb-4">
@@ -33,10 +33,10 @@ export default function About() {
           staying up-to-date with the latest technologies and industry standards
           to ensure the best results for our clients.
         </p>
-        <p className="text-lg mb-4">
+        <h3 className="text-2xl mb-4 text-highlight-secondary">
           Trust Magnolia Electrical to light up your world with expertise and
           care. Your satisfaction is our priority.
-        </p>
+        </h3>
       </div>
     </div>
   )

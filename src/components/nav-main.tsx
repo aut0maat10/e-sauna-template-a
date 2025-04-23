@@ -59,7 +59,9 @@ export function NavMain() {
   return (
     <div className="container w-full flex flex-wrap justify-between py-8 px-4 max-w-6xl m-auto">
       <div>
-        <span className="text-4xl">⚡</span>
+        <Link href="/" className="text-4xl">
+          ⚡
+        </Link>
       </div>
       <div>
         <NavigationMenu>
@@ -74,37 +76,22 @@ export function NavMain() {
             <NavigationMenuItem>
               <NavigationMenuTrigger>Service Area</NavigationMenuTrigger>
               <NavigationMenuContent>
-                <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
-                  <li className="row-span-3">
-                    <NavigationMenuLink asChild>
-                      <a
-                        className="text-xl flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
-                        href="/"
-                      >
-                        {/* <Icons.logo className="h-6 w-6" /> */}
-                        <div className="mb-2 mt-4 text-lg font-medium">
-                          shadcn/ui
-                        </div>
-                        <p className="text-sm leading-tight text-muted-foreground">
-                          Beautifully designed components built with Radix UI
-                          and Tailwind CSS.
-                        </p>
-                      </a>
-                    </NavigationMenuLink>
-                  </li>
-                  <ListItem href="/docs" title="Introduction" className="">
-                    Re-usable components built using Radix UI and Tailwind CSS.
-                  </ListItem>
-                  <ListItem href="/docs/installation" title="Installation">
-                    How to install dependencies and structure your app.
-                  </ListItem>
-                  <ListItem
-                    href="/docs/primitives/typography"
-                    title="Typography"
-                  >
-                    Styles for headings, paragraphs, lists...etc
-                  </ListItem>
-                </ul>
+                <div className="p-4">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d119039.8479035373!2d-73.935242!3d40.6976701!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c250b5d1b1b1b1%3A0x8c8e8e8e8e8e8e8e!2sNew%20York%20City%20Metropolitan%20Area!5e0!3m2!1sen!2sus!4v1611810193437!5m2!1sen!2sus"
+                    width="400"
+                    height="300"
+                    style={{ border: 0 }}
+                    allowFullScreen={false}
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    className="rounded-md shadow-md"
+                  ></iframe>
+                  <p className="mt-2 text-sm text-muted-foreground">
+                    We service customers in the Tri-State area. Please contact
+                    us for details.
+                  </p>
+                </div>
               </NavigationMenuContent>
             </NavigationMenuItem>
             <NavigationMenuItem>

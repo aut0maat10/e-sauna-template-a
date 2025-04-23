@@ -96,7 +96,7 @@ export function ServicesSection({ className, ...props }: CardProps) {
           {servicesCards.map(service => (
             <Card
               key={service.title}
-              className={cn('w-[380px] basis-full max-w-72')}
+              className={cn('w-[380px] basis-full max-w-72 flex flex-col')}
               {...props}
             >
               <CardHeader>
@@ -107,7 +107,7 @@ export function ServicesSection({ className, ...props }: CardProps) {
                 </CardTitle>
                 <CardDescription></CardDescription>
               </CardHeader>
-              <CardContent>
+              <CardContent className="flex-grow">
                 <p>{service.description}</p>
               </CardContent>
               <CardFooter>

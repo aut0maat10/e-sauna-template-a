@@ -34,7 +34,7 @@ export function HeroFull() {
               <MobileIcon className="mr-2 h-4 w-4" />
               Call Us Now
             </Button>
-            <Button className="bg-secondary">
+            <Button className="bg-secondary-foreground dark:bg-secondary">
               <EnvelopeOpenIcon className="mr-2 h-4 w-4" />
               Get a Free Quote
             </Button>
