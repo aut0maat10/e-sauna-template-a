@@ -12,7 +12,6 @@ export function Hero() {
       <img
         src="/hero.jpeg"
         alt={'Luxury house interior'}
-        style={{ objectFit: 'cover' }}
         className="object-cover -z-10"
         loading="lazy"
       />
