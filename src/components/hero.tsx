@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import { ContactForm } from './contact-form'
 import {
   Card,
@@ -10,13 +9,12 @@ import {
 export function Hero() {
   return (
     <div className="h-[70vh] w-full relative">
-      <Image
+      <img
         src="/hero.jpeg"
         alt={'Luxury house interior'}
-        // style={{ objectFit: 'cover' }}
+        style={{ objectFit: 'cover' }}
         className="object-cover -z-10"
         loading="lazy"
-        fill={true}
       />
       <div className="absolute inset-0 bg-black opacity-35 z-0"></div>
       <div className="flex justify-center items-center gap-8 w-full h-full">
