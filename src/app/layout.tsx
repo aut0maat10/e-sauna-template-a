@@ -19,7 +19,7 @@ const noto_serif = Noto_Serif({
   display: 'swap',
 })
 
-export default function RootLayout({ children }: RootLayoutProps) {
+export default function RootLayout({ children }) {
   const [isMobile, setIsMobile] = useState(false)
 
   useEffect(() => {

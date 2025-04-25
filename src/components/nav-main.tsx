@@ -67,11 +67,12 @@ export function NavMain() {
         <NavigationMenu>
           <NavigationMenuList>
             <NavigationMenuItem>
-              <Link href="/about" legacyBehavior passHref>
-                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                  About Us
-                </NavigationMenuLink>
-              </Link>
+              <NavigationMenuLink
+                href="/about"
+                className={navigationMenuTriggerStyle()}
+              >
+                About Us
+              </NavigationMenuLink>
             </NavigationMenuItem>
             <NavigationMenuItem>
               <NavigationMenuTrigger>Service Area</NavigationMenuTrigger>
@@ -113,11 +114,12 @@ export function NavMain() {
               </NavigationMenuContent>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <Link href="/contact" legacyBehavior passHref>
-                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                  Contact
-                </NavigationMenuLink>
-              </Link>
+              <NavigationMenuLink
+                href="/contact"
+                className={navigationMenuTriggerStyle()}
+              >
+                Contact
+              </NavigationMenuLink>
             </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu>

@@ -3,12 +3,44 @@
 import * as React from 'react'
 import Link from 'next/link'
 import { ModeToggle } from './mode-toggle'
-import * as DropdownMenu from '@radix-ui/react-dropdown-menu'
-import { HamburgerMenuIcon, Cross2Icon } from '@radix-ui/react-icons'
+import { Button } from '@/components/ui/button'
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from '@/components/ui/sheet'
+import { HamburgerMenuIcon } from '@radix-ui/react-icons'
+
+const servicesSubMenu = [
+  {
+    title: 'Electrical Repairs',
+    href: '/services/electrical-repairs',
+  },
+  {
+    title: 'Installations & Upgrades',
+    href: '/services/installations',
+  },
+  {
+    title: 'Emergency Services',
+    href: '/services/emergency-services',
+  },
+  {
+    title: 'Residential Services',
+    href: '/services/residential-services',
+  },
+  {
+    title: 'Commercial Services',
+    href: '/services/commercial-services',
+  },
+  {
+    title: 'Inspections & Maintenance',
+    href: '/services/inspections-and-maintenance',
+  },
+]
 
 export function NavMobile() {
-  const [isMenuOpen, setIsMenuOpen] = React.useState(false)
-
   return (
     <div className="flex justify-between items-center py-4 px-4">
       {/* Logo */}
@@ -16,56 +48,57 @@ export function NavMobile() {
         ⚡
       </Link>
 
-      {/* Hamburger Menu */}
-      <DropdownMenu.Root open={isMenuOpen} onOpenChange={setIsMenuOpen}>
-        <DropdownMenu.Trigger asChild>
+      {/* Hamburger Menu with Sidebar */}
+      <Sheet>
+        <SheetTrigger asChild>
           <button
             className="p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent"
             aria-label="Toggle Menu"
           >
-            {isMenuOpen ? (
-              <Cross2Icon className="h-6 w-6" />
-            ) : (
-              <HamburgerMenuIcon className="h-6 w-6" />
-            )}
+            <HamburgerMenuIcon className="h-6 w-6" />
           </button>
-        </DropdownMenu.Trigger>
-
-        <DropdownMenu.Content
-          className="absolute top-16 right-4 bg-white shadow-lg rounded-md w-64 z-50 p-2"
-          sideOffset={5}
-        >
-          <DropdownMenu.Item asChild>
-            <Link
-              href="/about"
-              className="block px-4 py-2 hover:bg-gray-100 rounded-md"
-            >
+        </SheetTrigger>
+        <SheetContent side="left" className="w-64">
+          <SheetHeader>
+            <SheetTitle className="text-2xl">Menu</SheetTitle>
+          </SheetHeader>
+          <nav className="mt-4 space-y-4">
+            {/* About Link */}
+            <Link href="/about" className="block text-lg hover:underline">
               About Us
             </Link>
-          </DropdownMenu.Item>
-          <DropdownMenu.Item asChild>
-            <Link
-              href="/services"
-              className="block px-4 py-2 hover:bg-gray-100 rounded-md"
-            >
-              Services
-            </Link>
-          </DropdownMenu.Item>
-          <DropdownMenu.Item asChild>
-            <Link
-              href="/contact"
-              className="block px-4 py-2 hover:bg-gray-100 rounded-md"
-            >
+
+            {/* Services with Sub-Menu */}
+            <div>
+              <p className="text-lg font-semibold">Services</p>
+              <ul className="ml-4 mt-2 space-y-2">
+                {servicesSubMenu.map(service => (
+                  <li key={service.title}>
+                    <Link href={service.href} className="block hover:underline">
+                      {service.title}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Contact Link */}
+            <Link href="/contact" className="block text-lg hover:underline">
               Contact
             </Link>
-          </DropdownMenu.Item>
-          <DropdownMenu.Item asChild>
-            <div className="px-4 py-2">
+
+            {/* Call Us Button */}
+            <Button className="w-full mt-4" asChild>
+              <a href="tel:+123456789">Call Us</a>
+            </Button>
+
+            {/* Mode Toggle */}
+            <div className="mt-4">
               <ModeToggle />
             </div>
-          </DropdownMenu.Item>
-        </DropdownMenu.Content>
-      </DropdownMenu.Root>
+          </nav>
+        </SheetContent>
+      </Sheet>
     </div>
   )
 }
