@@ -16,7 +16,7 @@ export function HeroFull() {
       <img
         src="/hero.jpeg"
         alt="Luxury house interior"
-        className="object-cover -z-10"
+        className="object-cover -z-10 w-full h-full"
         loading="lazy"
       />
       <div className="absolute inset-0 bg-black opacity-35 z-0"></div>
