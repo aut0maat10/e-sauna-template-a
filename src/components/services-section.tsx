@@ -64,7 +64,7 @@ const servicesCards = [
   },
 ]
 
-export function ServicesSection({ className, ...props }: CardProps) {
+export function ServicesSection({ ...props }: CardProps) {
   return (
     <div className="container flex flex-col items-center">
       <div className="flex flex-col lg:flex-row items-start max-w-6xl p-4 md:p-8">
@@ -92,15 +92,11 @@ export function ServicesSection({ className, ...props }: CardProps) {
         </div>
       </div>
       <div className="flex flex-col justify-center">
-        <div
-          className="container flex flex-wrap gap-8 h-full md:mx-12 md:px-12 justify-center md:justify-start items-stretch"
-        >
+        <div className="container flex flex-wrap gap-8 h-full md:mx-12 md:px-12 justify-center md:justify-start items-stretch">
           {servicesCards.map(service => (
             <Card
               key={service.title}
-              className={cn(
-                'w-[380px] basis-full max-w-72 flex flex-col'
-              )}
+              className={cn('w-[380px] basis-full max-w-72 flex flex-col')}
               {...props}
             >
               <CardHeader>

@@ -1,5 +1,5 @@
 import React from 'react'
-import { AlertTriangle, Clock, Phone, ShieldCheck, Zap } from 'lucide-react'
+import { AlertTriangle, Clock, Phone } from 'lucide-react'
 import { ServiceCard } from '@/components/service-card'
 import Image from 'next/image'
 

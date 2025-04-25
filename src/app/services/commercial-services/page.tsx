@@ -1,4 +1,4 @@
-import { Building2, Factory, Server, ShieldCheck, Zap } from 'lucide-react'
+import { Building2, Factory, Server } from 'lucide-react'
 import { ServiceCard } from '@/components/service-card'
 import Image from 'next/image'
 
