@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import { Button } from './ui/button'
+import Link from 'next/link'
 import { EnvelopeOpenIcon, MobileIcon } from '@radix-ui/react-icons'
 // import { ContactForm } from './contact-form'
 // import {
@@ -34,10 +35,12 @@ export function HeroFull() {
               <MobileIcon className="mr-2 h-4 w-4" />
               Call Us Now
             </Button>
-            <Button className="bg-secondary-foreground dark:bg-secondary">
-              <EnvelopeOpenIcon className="mr-2 h-4 w-4" />
-              Get a Free Quote
-            </Button>
+            <Link href="/contact">
+              <Button className="bg-secondary-foreground dark:bg-secondary">
+                <EnvelopeOpenIcon className="mr-2 h-4 w-4" />
+                Get a Free Quote
+              </Button>
+            </Link>
           </div>
         </div>
       </div>

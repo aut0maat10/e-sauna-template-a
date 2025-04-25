@@ -20,7 +20,7 @@ import testimonials from '@/lib/testimonials'
 export default function ReviewCarousel() {
   const [rating, setRating] = useState(5)
   return (
-    <div className="flex items-center p-28 gap-4 w-full container">
+    <div className="flex flex-col lg:flex-row items-center p-14 lg:p-28 gap-4 w-full container">
       <div className="mr-12">
         <h3 className="text-5xl text-yellow-500">
           What our customers

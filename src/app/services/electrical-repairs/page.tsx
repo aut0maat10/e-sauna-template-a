@@ -5,7 +5,7 @@ import Image from 'next/image'
 
 const ElectricalRepairs: React.FC = () => {
   return (
-    <div className="container mx-auto px-4 py-6 flex flex-col justify-center items-center">
+    <div className="container md:mx-auto md:px-4 py-6 flex flex-col justify-center items-center">
       <div className="mb-12 text-center">
         <h1 className="mb-4 text-4xl font-bold">Electrical Repairs</h1>
         <p className="mx-auto max-w-5xl text-lg text-muted-foreground">

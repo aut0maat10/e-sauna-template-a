@@ -1,8 +1,11 @@
+'use client'
 import { ThemeProvider } from '@/components/theme-provider'
 import { Oswald, Noto_Serif } from 'next/font/google'
 import './globals.css'
 import { NavMain } from '@/components/nav-main'
+import { NavMobile } from '@/components/nav-mobile'
 import { Footer } from '@/components/footer'
+import { useEffect, useState } from 'react'
 
 const oswald = Oswald({
   subsets: ['latin'],
@@ -17,6 +20,18 @@ const noto_serif = Noto_Serif({
 })
 
 export default function RootLayout({ children }: RootLayoutProps) {
+  const [isMobile, setIsMobile] = useState(false)
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768) // Adjust breakpoint as needed
+    }
+
+    handleResize() // Check on initial render
+    window.addEventListener('resize', handleResize)
+    return () => window.removeEventListener('resize', handleResize)
+  }, [])
+
   return (
     <>
       <html
@@ -36,7 +51,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
             enableSystem
             disableTransitionOnChange
           >
-            <NavMain />
+            {isMobile ? <NavMobile /> : <NavMain />}
             {children}
             <Footer />
           </ThemeProvider>
