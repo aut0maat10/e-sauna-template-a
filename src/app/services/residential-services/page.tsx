@@ -1,7 +1,6 @@
 import React from 'react'
 import { Home, Lightbulb, Plug, ShieldCheck, Wrench } from 'lucide-react'
 import { ServiceCard } from '@/components/service-card'
-import Image from 'next/image'
 
 const ResidentialServices: React.FC = () => {
   return (
@@ -17,12 +16,10 @@ const ResidentialServices: React.FC = () => {
         </p>
       </div>
       <div className="relative w-full max-w-4xl h-96 mb-12">
-        <Image
+        <img
           src="/wires.jpeg"
           alt="Residential electrical services"
-          layout="fill"
-          objectFit="cover"
-          className="rounded-lg shadow-lg"
+          className="rounded-lg shadow-lg object-cover w-full h-full"
         />
       </div>
       <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 mb-12">

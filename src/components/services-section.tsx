@@ -9,7 +9,6 @@ import {
 import { Button } from './ui/button'
 import Link from 'next/link'
 import { cn } from '@/lib/utils'
-import Image from 'next/image'
 
 type CardProps = React.ComponentProps<typeof Card>
 
@@ -82,12 +81,10 @@ export function ServicesSection({ ...props }: CardProps) {
           </h3>
         </div>
         <div className="lg:w-1/2 flex justify-center">
-          <Image
+          <img
             src="/electrician-happy.jpeg"
             alt="Happy electrician at work"
-            width={800}
-            height={400}
-            className="my-8 rounded-lg shadow-lg"
+            className="my-8 rounded-lg shadow-lg object-cover w-full h-full max-w-sm"
           />
         </div>
       </div>

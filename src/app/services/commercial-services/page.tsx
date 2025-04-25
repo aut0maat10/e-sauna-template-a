@@ -1,6 +1,5 @@
 import { Building2, Factory, Server } from 'lucide-react'
 import { ServiceCard } from '@/components/service-card'
-import Image from 'next/image'
 
 export default function CommercialServices() {
   return (
@@ -16,12 +15,10 @@ export default function CommercialServices() {
         </p>
       </div>
       <div className="relative w-full max-w-4xl h-96 mb-12">
-        <Image
+        <img
           src="/wires.jpeg"
           alt="Vintage light bulbs"
-          layout="fill"
-          objectFit="cover"
-          className="rounded-lg shadow-lg"
+          className="rounded-lg shadow-lg object-cover w-full h-full"
         />
       </div>
       <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 mb-12">

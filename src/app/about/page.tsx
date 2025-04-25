@@ -1,5 +1,3 @@
-import Image from 'next/image'
-
 export default function About() {
   return (
     <div className="flex flex-col items-center px-4 py-8 bg-background">
@@ -15,12 +13,10 @@ export default function About() {
         </p>
       </div>
       <div className="relative w-full max-w-4xl h-96 mb-6">
-        <Image
+        <img
           src="/electricians.jpeg"
           alt="Vintage light bulbs"
-          layout="fill"
-          objectFit="cover"
-          className="rounded-lg shadow-lg"
+          className="rounded-lg shadow-lg object-cover w-full h-full"
         />
       </div>
       <div className="max-w-4xl text-center">

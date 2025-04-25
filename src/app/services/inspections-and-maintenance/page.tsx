@@ -5,9 +5,9 @@ import {
   Wrench,
   AlertTriangle,
   ClipboardCheck,
+  Image,
 } from 'lucide-react'
 import { ServiceCard } from '@/components/service-card'
-import Image from 'next/image'
 
 const InspectionsAndMaintenance: React.FC = () => {
   return (
@@ -21,12 +21,10 @@ const InspectionsAndMaintenance: React.FC = () => {
         </p>
       </div>
       <div className="relative w-full max-w-4xl h-96 mb-12">
-        <Image
+        <img
           src="/wires.jpeg"
           alt="Inspections and maintenance services"
-          layout="fill"
-          objectFit="cover"
-          className="rounded-lg shadow-lg"
+          className="rounded-lg shadow-lg object-cover w-full h-full"
         />
       </div>
       <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 mb-12">
