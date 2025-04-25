@@ -1,6 +1,11 @@
 import React from 'react'
 
-function RatingReview({ rating, setRating }) {
+interface RatingReviewProps {
+  rating: number
+  setRating: (rating: number) => void
+}
+
+function RatingReview({ rating, setRating }: RatingReviewProps) {
   return (
     <div>
       {[1, 2, 3, 4, 5].map(star => {
